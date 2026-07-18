@@ -1,0 +1,21 @@
+# Deposited data artifacts (downloaded from Zenodo or produced locally) — never in git
+zenodo/*
+!zenodo/.gitkeep
+
+# Config side-effect dirs and run outputs
+experiments/
+results/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Large binaries (belt and braces)
+*.pth
+*.pt
+*.npz
+*.h5
+
+.DS_Store

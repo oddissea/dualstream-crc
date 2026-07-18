@@ -1,0 +1,51 @@
+{
+  "title": "Dual-stream architecture with asymmetric clinical safety evaluation for colorectal histopathology — reproducibility code",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "description": "<p>Companion <strong>code</strong> for <em>Nasser-eddine et al., &ldquo;Dual-stream architecture with asymmetric clinical safety evaluation for colorectal histopathology&rdquo;</em> (submitted to <em>Medical Image Analysis</em>).</p><p>This record archives the tagged GitHub repository: a single self-contained Jupyter notebook (<code>reproduce.ipynb</code>) that defines the dual-stream classifier head, the Gated Attention MIL aggregator, the Asymmetric Clinical Safety Score (ACSS) and the cross-validation inline, and reproduces every headline result of the paper &mdash; patch level (F4/S4/F6: accuracy 92.37&#37;/93.39&#37;/92.67&#37;, ACSS 95.92/95.88/95.56) and slide level (91-slide cohort: 92.8&nbsp;&plusmn;&nbsp;1.1&#37;, zero CAR&rarr;NOR for F4) &mdash; from pre-computed de-identified embeddings. Dependencies: <code>torch</code>, <code>numpy</code>, <code>scikit-learn</code>.</p><p>The de-identified data artifacts this code consumes (the shared <code>test_embeddings.npz</code>, the per-model classifier heads <code>&lt;M&gt;_head.pth</code>, and the 91-slide caches <code>external_cache_&lt;M&gt;.pt</code>) are deposited in the companion <strong>data record</strong>, DOI <code>10.5281/zenodo.21327829</code>. Raw whole-slide images and patch-level image arrays are NOT included in either record: they contain patient material and are available on reasonable request to the corresponding author, subject to HUC approval and a data-processing agreement.</p>",
+  "creators": [
+    {
+      "name": "Nasser-eddine López, Fernando H.",
+      "orcid": "0009-0009-1190-1967",
+      "affiliation": "Universidad Nacional de Educación a Distancia (UNED)"
+    },
+    {
+      "name": "Asensio Ramos, Andrés",
+      "orcid": "0000-0002-1248-0553",
+      "affiliation": "Instituto de Astrofísica de Canarias (IAC); Universidad de La Laguna (ULL)"
+    },
+    {
+      "name": "Salido, Eduardo",
+      "orcid": "0000-0001-9599-9854",
+      "affiliation": "Universidad de La Laguna (ULL); Hospital Universitario de Canarias (HUC)"
+    },
+    {
+      "name": "Westendorp Plaza, Carlos",
+      "orcid": "0000-0001-5176-5431",
+      "affiliation": "Instituto de Astrofísica de Canarias (IAC); Universidad de La Laguna (ULL)"
+    }
+  ],
+  "keywords": [
+    "computational pathology",
+    "colorectal cancer",
+    "histopathology",
+    "cost-sensitive learning",
+    "focal loss",
+    "multiple instance learning",
+    "attention MIL",
+    "clinical safety",
+    "dual-stream",
+    "reproducibility"
+  ],
+  "language": "eng",
+  "version": "v1.0-media-submission",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementedBy",
+      "identifier": "10.5281/zenodo.21327829",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# The notebook is self-contained: every model (patch head, Gated Attention MIL),
+# the ACSS, and the cross-validation are defined inline. These three are the only
+# *compute* dependencies. To open and run the notebook you also need Jupyter, e.g.:
+#     pip install -r requirements.txt jupyterlab
+torch>=2.1
+numpy
+scikit-learn
