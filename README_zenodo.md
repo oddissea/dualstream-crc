@@ -2,7 +2,7 @@
 
 De-identified data artifacts for **Nasser-eddine et al.**, *"Dual-stream architecture with asymmetric clinical safety evaluation for colorectal histopathology"* (submitted to *Medical Image Analysis*).
 
-This is the **data record** (DOI `10.5281/zenodo.21327829`). The code lives in a **companion code record** (DOI `10.5281/zenodo.YYYYYYY`), minted from the GitHub release `v1.0-media-submission` of [`github.com/oddissea/dualstream-crc`](https://github.com/oddissea/dualstream-crc). Together they reproduce every headline number **without the raw whole-slide images**, which contain patient material and are available on reasonable request only.
+This is the **data record** (DOI `10.5281/zenodo.21327829`). The code lives in a **companion code record** (DOI `10.5281/zenodo.21429150`), minted from the GitHub release `v1.0-media-submission` of [`github.com/oddissea/dualstream-crc`](https://github.com/oddissea/dualstream-crc). Together they reproduce every headline number **without the raw whole-slide images**, which contain patient material and are available on reasonable request only.
 
 ## Files in this data record
 

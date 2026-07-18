@@ -43,7 +43,7 @@ There is intentionally **no `src/` package**: the embeddings are the frozen enco
 
 ## Data availability
 
-- **Code**: this repository, tag `v1.0-media-submission`, archived on Zenodo (DOI `10.5281/zenodo.YYYYYYY`).
+- **Code**: this repository, tag `v1.0-media-submission`, archived on Zenodo (DOI `10.5281/zenodo.21429150`).
 - **Embeddings, heads and slide caches** (one shared `test_embeddings.npz` — F4/S4/F6 share the frozen encoder — plus per-model `<M>_head.pth` and `external_cache_<M>.pt`, M ∈ {F4, S4, F6}): Zenodo DOI `10.5281/zenodo.21327829`.
 - **Whole-slide images and patch-level image arrays**: available on **reasonable request** to the corresponding author, subject to HUC approval and a data-processing agreement. They contain patient material and are **not** publicly redistributable — which is why this repo reproduces the results from de-identified embeddings instead.
 
