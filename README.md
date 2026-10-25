@@ -1,6 +1,6 @@
 # Dual-stream architecture with asymmetric clinical safety evaluation for colorectal histopathology
 
-Reproducibility artifact for **Nasser-eddine et al.**, *"Dual-stream architecture with asymmetric clinical safety evaluation for colorectal histopathology"* (submitted to *Medical Image Analysis*).
+Reproducibility artifact for **Nasser-eddine et al.**, *"Dual-stream architecture with asymmetric clinical safety evaluation for colorectal histopathology"* (unpublished manuscript).
 
 A two-stage colorectal histopathology classifier (**NOR** normal / **ADE** adenoma / **CAR** carcinoma) with three contributions over the two-stage SupCon+focal baseline:
 
@@ -21,7 +21,7 @@ At the patch level, F4 is selected not because it is the most accurate (S4 is) b
 
 > **Correction (v1.1, October 2026).** In v1.0 the slide-level cross-validation used the held-out fold both to stop training and to report the result, which biased the slide-level accuracy upwards (F4: 92.8 ± 1.1 %; S4: 95.0 %, 1 of 205; F6: 92.3 %). From v1.1, early stopping is decided on a stratified 20 % of each training block, and the held-out fold is evaluated once, at the end, with the restored best model. The patch-level results do not change, and none of the three configurations classifies a carcinoma slide as normal.
 
-The slide-level figures are from PyTorch 2.7.1 on Apple MPS. With PyTorch 2.13 the same code gives F4 88.57 ± 2.66 %, S4 89.67 ± 2.66 % and F6 88.57 ± 2.04 % (the S4 and F6 figures of the manuscript); CAR→NOR is 0 of 205 in both versions.
+The slide-level figures are from PyTorch 2.7.1 on Apple MPS. With PyTorch 2.13 the same code gives F4 88.57 ± 2.66 %, S4 89.67 ± 2.66 % and F6 88.57 ± 2.04 %; CAR→NOR is 0 of 205 in both versions.
 
 ## Quickstart
 
@@ -54,10 +54,10 @@ There is intentionally **no `src/` package**: the embeddings are the frozen enco
 ## Citation
 
 ```bibtex
-@article{nassereddine2026dualstream,
+@unpublished{nassereddine2026dualstream,
   title   = {Dual-stream architecture with asymmetric clinical safety evaluation for colorectal histopathology},
   author  = {Nasser-eddine L{\'o}pez, Fernando H. and Asensio Ramos, Andr{\'e}s and Salido, Eduardo and Westendorp Plaza, Carlos},
-  journal = {Medical Image Analysis (submitted)},
+  note    = {Unpublished manuscript},
   year    = {2026}
 }
 ```
