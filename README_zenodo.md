@@ -2,7 +2,7 @@
 
 De-identified data artifacts for **Nasser-eddine et al.**, *"Dual-stream architecture with asymmetric clinical safety evaluation for colorectal histopathology"* (submitted to *Medical Image Analysis*).
 
-This is the **data record** (DOI `10.5281/zenodo.21327829`). The code lives in a **companion code record** (DOI `10.5281/zenodo.21429150`), minted from the GitHub release `v1.0-media-submission` of [`github.com/oddissea/dualstream-crc`](https://github.com/oddissea/dualstream-crc). Together they reproduce every headline number **without the raw whole-slide images**, which contain patient material and are available on reasonable request only.
+This is the **data record** (DOI `10.5281/zenodo.21327829`). The code lives in a **companion code record** (DOI `10.5281/zenodo.21429150`), minted from the GitHub release `v1.0-media-submission` (corrected in `v1.1`) of [`github.com/oddissea/dualstream-crc`](https://github.com/oddissea/dualstream-crc). Together they reproduce every headline number **without the raw whole-slide images**, which contain patient material and are available on reasonable request only.
 
 ## Files in this data record
 
@@ -28,7 +28,9 @@ jupyter lab reproduce.ipynb                    # run top to bottom
 `reproduce.ipynb` is **self-contained**: it defines the classifier head, the Gated Attention MIL, the ACSS, and the cross-validation inline, then
 
 - **patch level** — loads each `<M>_head.pth` over the shared `test_embeddings.npz`: F4 92.37 % / 95.92 / 5-of-2412 ; S4 93.39 % / 95.88 / 33 ; F6 92.67 % / 95.56 / 31 ;
-- **slide level** — trains the AttnMIL over `external_cache_<M>.pt` (5-fold × 5 seeds): F4 92.8 ± 1.1 % / 0-of-205 ; S4 95.0 % / 1 ; F6 92.3 % / 0.
+- **slide level** — trains the AttnMIL over `external_cache_<M>.pt` (5-fold × 5 seeds, early stopping on a stratified 20 % of each training block): F4 88.4 ± 2.7 % / 0-of-205 ; S4 90.1 % / 0 ; F6 88.8 % / 0 (PyTorch 2.7.1; with PyTorch 2.13 the accuracies move by up to 0.4 points and CAR→NOR stays at 0).
+
+> **Correction (v1.1, October 2026).** In v1.0 of the code the slide-level cross-validation used the held-out fold both to stop training and to report the result, which biased the slide-level accuracy upwards (F4: 92.8 ± 1.1 %; S4: 95.0 %, 1 of 205; F6: 92.3 %). From v1.1, early stopping is decided on a stratified 20 % of each training block, and the held-out fold is evaluated once, at the end, with the restored best model. The patch-level results do not change, and none of the three configurations classifies a carcinoma slide as normal.
 
 ## Not included (by design)
 
